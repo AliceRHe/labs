@@ -1,0 +1,5 @@
+from folium.plugins import HeatMap
+
+heat_data=list(zip(crime_csv['Y'], crime_csv['X']))
+heatmap = folium.plugins.HeatMap(heat_data, min_opacity=0.5)
+base_map.add_child(heatmap)
